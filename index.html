@@ -1,50 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Article Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="h-full bg-slate-300">
-    <!-- the body with the color -->
-    <div class="bg-white rounded-2xl mt-16 ml-7 mr-7 -mb-16 min-h-[calc(100vh-7rem)]">
+    <!-- Card wrapper -->
+    <div
+      class="bg-white rounded-2xl mt-16 ml-7 mr-7 min-h-[calc(100vh-7rem)] flex flex-col overflow-hidden relative"
+    >
+      <!-- Image section -->
+      <div class="w-full h-40 overflow-hidden">
+        <img
+          class="w-full h-full object-cover"
+          src="./images/drawers.jpg"
+          alt="An image of a drawer"
+        />
+      </div>
 
-      <!-- the div seperated into two sections, the image and the text section -->
-      <div class="flex flex-col justify-between items-center gap-12">
-        <!-- the image section -->
-         <div class="w-full h-40 overflow-hidden rounded-t-2xl">
-          <img class="w-full h-full object-cover" src="./images/drawers.jpg" alt="An image of a drawer">
-         </div>
-        
-        <!-- the text section divided into two -->
-        <div class="p-6 flex flex-col justify-between items-center gap-6">
-          <!-- The first section containing the heading and paragraph -->
-           <div class="flex flex-col justify-center items-left gap-6">
-              <h1 class="font-bold text-slate-600">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
-              <p class="text-slate-500">Ever been in a room and felt like somethinf was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
-           </div>
-           <!-- The second section holding the profile -->
-            <div class="flex justify-between items-center  w-full">
-              <!-- The profile picture -->
-               <div class="flex justify-center items-center gap-4">
-                  <img class="rounded-full w-10 h-10" src="./images/avatar-michelle.jpg" alt="Michelle Appleton">
-              <div>
-                <!-- The profile name and date -->
-                <p>Michelle Appleton</p>
-                <p>28 Jun 2020</p>
-              </div>
-               </div>
-              
-              <!-- The share button -->
-               <button class="bg-slate-100 p-2 rounded-full"><img src="./images/icon-share.svg" alt=""></button>
+      <!-- Text section -->
+      <div class="p-6 flex flex-col gap-6 flex-1">
+        <h1 class="font-bold text-slate-600">
+          Shift the overall look and feel by adding these wonderful touches
+          to furniture in your home
+        </h1>
+        <p class="text-slate-500">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I've got some simple tips to help
+          you make any room feel complete.
+        </p>
+      </div>
+
+      <!-- Bottom section -->
+      <div class="w-full">
+        <!-- Profile -->
+        <div
+          id="profile"
+          class="flex justify-between items-center w-full p-4 h-20"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              class="rounded-full w-10 h-10"
+              src="./images/avatar-michelle.jpg"
+              alt="Michelle Appleton"
+            />
+            <div>
+              <p class="font-bold text-slate-600">Michelle Appleton</p>
+              <p class="text-slate-400 text-sm">28 Jun 2020</p>
             </div>
-           
+          </div>
+          <button
+            id="share-btn"
+            class="bg-slate-100 p-2 rounded-full hover:bg-slate-200"
+          >
+            <img src="./images/icon-share.svg" alt="Share" />
+          </button>
+        </div>
+
+        <!-- Share bar -->
+        <div
+          id="share-bar"
+          class="hidden flex justify-between items-center w-full p-4 h-20 bg-slate-700"
+        >
+          <div class="flex items-center gap-6">
+            <p class="text-slate-400 tracking-[0.3em]">SHARE</p>
+            <img src="./images/icon-facebook.svg" alt="Facebook" />
+            <img src="./images/icon-twitter.svg" alt="Twitter" />
+            <img src="./images/icon-pinterest.svg" alt="Pinterest" />
+          </div>
+          <button
+            id="share-back"
+            class="bg-slate-300 p-2 rounded-full hover:bg-slate-400"
+          >
+            <img src="./images/icon-share.svg" alt="Close" />
+          </button>
         </div>
       </div>
     </div>
-
-
 
     
     <script type="module" src="/src/main.js"></script>
